@@ -1,0 +1,415 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+}
+body{
+    background: #000928;
+    color: #fff;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.3)), url('https://assets.nflxext.com/ffe/siteui/vlv3/42df4e1f-bef6-499e-87ff-c990584de314/5e7c383c-1f88-4983-b4da-06e14c0984ba/IN-en-20230904-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+    padding: 10px 8%;
+    background-size:auto;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+nav .logo{
+    width: 140px;
+    filter: contrast(150%);
+    cursor: pointer;
+}
+button{
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    border: 0;
+    background: #ff0000;
+    font-size: 15px;
+    font-weight: 200;
+    color: #fff;
+}
+.lang{
+    background: transparent;
+    border: 1px solid #817f7f;
+}
+.lang img{
+    width: 8px;
+    margin-left: 10px;
+
+}
+nav .sign{
+    margin-left: 15px;
+    transition: all 0.2s ease;
+}
+.sign:hover{
+    background: #d20303;
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.header-content h1{
+    width: 120%;
+    line-height: 70px;
+    font-size: 45px;
+    font-weight: 900;
+}
+.header-content p{
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+.email{
+    flex: 1;
+}
+.email input{
+    border: 0;
+    outline: 0;
+    background: black;
+    border: 1px solid #fff;
+    padding: 15px 20px;
+    opacity: 0.5;
+    color: #fff;
+    width: 420px;
+    border-radius: 5px;
+}
+.email input text{
+    color: #fff;
+}
+.email input ::placeholder{
+    font-size: 20px;
+    color: #fff;
+    opacity: 100%;
+}
+.email button{
+    background: red;
+    color: #fff;
+    outline: none;
+    border: 0;
+    padding: 12px 16px;
+    border-radius: 3px;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.email button:hover{
+    background: #d20303;
+}
+.email button i{
+    margin-left: 10px;
+    font-size: 20px;
+}
+.features{
+    background: #000;
+    border-top: 10px solid rgb(36, 36, 36);
+    padding: 50px 12%;
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.row .text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.text-col h1{
+    font-size: 50px;
+    font-weight: 900;
+}
+.text-col p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.img-col{
+    flex-basis: 50%;    
+    margin-bottom: 20px;
+    background-image: url('https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/cards/v2.1/enjoyOnTv/en.png');
+}
+.img-col img{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+.img-col1{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col1 img{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+.box{
+    display: flex;
+    padding: 10px;
+    border: 1px solid grey;
+    width: 30%;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-top: -5%;
+}
+.box img{
+    width: 50px;
+}
+.box p{
+    margin-left: 30px;
+    margin-top: 20px;
+    flex-direction: column;
+}
+.box span{
+    font-size: 15px;
+}
+.box i{
+    margin-left: 50px;
+    color: dodgerblue;
+    
+}
+.faq{
+    width: 100%;
+    height: 140vh;
+    border-top: 10px solid rgb(36, 36, 36);
+    background: #000;
+}
+.faq h1{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 800;
+    margin-top: 3%;
+}
+.accordian{
+    margin: 1% 15%;
+    width: 120%;
+    max-width: 800px;
+}
+.accordian li{
+    list-style: none;
+    width: 120%;
+    padding: 5px ;
+}
+.accordian li label{
+    display: flex;
+    align-items: center;
+    background-color: rgb(45,45,45);
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 2px;
+    padding: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+.accordian li label:hover{
+    background-color: #3e3e3e;
+}
+.accordian li label::after{
+    content: '+';
+    font-size: 40px;
+    font-weight: 100;
+    position: absolute;
+    transition: transform 0.5s;
+    right: 20px;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordian .content{
+    background: #3e3e3e;
+    padding: 0px 20px;
+    text-align: left;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+    max-height: 0;
+}
+.accordian input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordian ul li input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+form{
+    margin-top: 60px;
+    text-align: center;
+    justify-content: center;
+}
+form p{
+    margin-bottom: 20px;
+}
+.footer{
+    width: 100%;
+    height: 50vh;
+    border-top: 10px solid #3e3e3e;
+    background: #000;
+}
+.footer h4{
+    color: rgb(185, 185, 185);
+    font-weight: 100;
+    padding: 4% 12%;
+}
+.footer .columns{
+    display: flex;
+}
+.columns div{
+    margin-left: 12%;
+    margin-top: -3%;
+}
+.columns div ul li{
+    list-style: none;
+    line-height: 30px;
+    font-size: 14px;
+}
+.columns div ul li a{
+    color: rgb(185, 185, 185);
+}
+#btn2{
+    margin: 2% 12%;
+}
+#netflix{
+    padding: 0;
+    margin-left: 12%;
+}
+#Copyright{
+    text-align: center;
+    font-weight: 100;
+    font-size: 18px;
+    background: #000;
+    color: #3e3e3e;
+}
+#Copyright:hover {
+    color: #939393;
+}
+
+@media only screen and (max-width: 360px) {
+    body{
+        background: #000;
+        
+    }
+    .header{
+        width: 170%;
+    }
+    nav{
+        width: 100%;
+    }
+    .features{
+        text-align: center;
+        width: 170%;
+    }
+    nav .logo{
+        width: 90px;
+        filter: contrast(150%);
+        cursor: pointer;
+        margin-left: -20px;
+    }
+    nav div{
+        display: flex;
+        margin-left: 40px;
+    }
+    button{
+        padding: 5px 8px;
+        cursor: pointer;
+        border-radius: 3px;
+        outline: none;
+        border: 0;
+        background: #ff0000;
+        font-size: 12px;
+        font-weight: 200;
+        color: #fff;
+    }
+    .header-content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 5%;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 50px;
+        
+    }
+    .header-content h1{
+        text-align: center;
+        padding: 20px 0;
+        line-height: 40px;
+        width: 150%;
+        font-size: 35px;
+        font-weight: 700;
+        margin-left: -20%;
+    }
+    
+    .header-content p{
+        line-height: 18px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .email{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .email input{
+        width: 300px;
+    }
+    .email button{
+        margin-top: 25px;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .row .text-col{
+        width: 120%;
+    }
+    .row .text-col h1{
+        font-size: 30px;
+    }
+    .row .text-col p{
+        font-size: 20px;
+    }
+    .box{
+        width: 100%;
+        margin-left: -10px;
+    }
+    .faq{
+        align-items: center;
+        width: 170%;
+    }
+    .faq h1{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .faq .accordian{
+        margin-left: 12px;
+        width: 80%;
+    }
+    .footer{
+        margin-top: 30%;
+        width: 170%;
+    }
+    .columns{
+        margin-top: 2%;
+        margin-right: 10%;
+    }
+    .accordian li label{
+        font-size: 20px;
+    }
+    #Copyright{
+        margin-top: 5px;
+        color: red;
+        font-size: 15px;
+    }
+}
